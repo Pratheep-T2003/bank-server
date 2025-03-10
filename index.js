@@ -5,6 +5,15 @@ const cors = require("cors");
 const app = express();
 app.use(cors({ origin: "http://localhost:3000" }));
 app.use(express.json());
+const cors = require('cors');
+
+const corsOptions = {
+  origin: ['http://localhost:3000', 'https://bank-client-pnb6.onrender.com'],
+  methods: 'GET,POST,PUT,DELETE',
+  allowedHeaders: 'Content-Type,Authorization'
+};
+
+app.use(cors(corsOptions));
 
 // ✅ Root API
 app.get("/", (req, res) => {
