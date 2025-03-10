@@ -3,9 +3,8 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 const app = express();
-app.use(cors({ origin: "http://localhost:3000" }));
+// app.use(cors({ origin: "http://localhost:3000" }));
 app.use(express.json());
-const cors = require('cors');
 
 const corsOptions = {
   origin: ['http://localhost:3000', 'https://bank-client-pnb6.onrender.com'],
